@@ -15,27 +15,24 @@
 </head>
 
 <style>
-    .catalogue__button-item {
+    .catalogue__button-item,
+    .buy__button-item {
         width: 255px;
         height: 70px;
         border: 1px solid #7875FE;
-        /* Цвет границы */
         background-color: #FFFFFF;
         color: #7875FE;
-        /* Цвет текста */
         font-size: 20px;
-        /* Размер шрифта */
         text-align: center;
-        /* Выравнивание текста */
         padding: 23.5px 89.8px 23.5px 89.5px;
         cursor: pointer;
-        /* Курсор при наведении */
     }
 
-    .catalogue__button-item:hover {
+
+    .catalogue__button-item:hover,
+    .buy__button-item:hover {
         color: #FFFFFF;
         background-color: #7875FE;
-        /* Цвет фона при наведении */
     }
 </style>
 
@@ -94,7 +91,9 @@
                             </p>
                         </div>
                         <div class="catalogue__button">
+                            <a href="#" class="catalogue__button-link">
                             <button type="button" class="catalogue__button-item">Каталог</button>
+                            </a>
                     </section>
                     <section class="section__one-photo">
                         <img src="images/main-photo.svg" alt="Main-photo" class="main__photo">
@@ -145,7 +144,8 @@
                     <section class="section__two-down">
                         <div class="section__two-down-list">
                             <section class="section__two-down-photo">
-                                <img src="images/section__two-down.svg" alt="S_two_photo" class="section__two-down-item-img">
+                                <img src="images/section__two-down.svg" alt="S_two_photo"
+                                    class="section__two-down-item-img">
                             </section>
                             <section class="section__two-down-text-list">
                                 <div class="section__two-down-text-header">
@@ -153,14 +153,136 @@
                                         Максимальная белизна
                                     </h1>
                                     <p class="section__two-down-termin-up">
-                                        Для повышения белизны, гладкости и мягкости в состав бумажной массы вводят белые минеральные вещества: мел, тальк, каолин и др. Эта операция называется наполнением.
+                                        Для повышения белизны, гладкости и мягкости в состав бумажной массы вводят белые
+                                        минеральные вещества: мел, тальк, каолин и др. Эта операция называется
+                                        наполнением.
                                     </p>
                                     <p class="section__two-down-termin-down">
-                                        Отлив бумажного листа осуществляют на бумагоделательной машине, важнейшей частью которой является непрерывно движущаяся (как транспортер) металлическая или капроновая сетка.
+                                        Отлив бумажного листа осуществляют на бумагоделательной машине, важнейшей частью
+                                        которой является непрерывно движущаяся (как транспортер) металлическая или
+                                        капроновая сетка.
                                     </p>
                                 </div>
                             </section>
                         </div>
+                    </section>
+                </div>
+            </div>
+            <div class="container">
+                <div class="main__three">
+                    <section class="section__three">
+                        <ul class="section__three-list">
+                            <li class="section__three-list-item">
+                                <img src="/images/package-photo.svg" alt="bags-pic" class="section__three-item-img">
+                                <p class="section__three-list-item-head-text">
+                                    Упаковка
+                                </p>
+                                <p class="section__three-list-item-edition-text">
+                                    Тираж: от 50 штук
+                                </p>
+                                <p class="section__three-list-item-edition-text">
+                                    Сделано из крафт-бумаги или плотного картона. Упаковки имеют различные формы и расцветки, изготовим форму под заказ.
+                                </p>
+                                <a href="#" class="asf">
+                                    <p class="section__three-list-item-edition-text">
+                                    Подробнее →
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="section__three-list-item">
+                                <img src="/images/plastic-bag.svg" alt="bags-pic" class="section__three-item-img">
+                                <p class="section__three-list-item-head-text">
+                                    Пакеты
+                                </p>
+                                <p class="section__three-list-item-edition-text">
+                                    Тираж: от 200 штук
+                                </p>
+                                <p class="section__three-list-item-edition-text">
+                                    С прямоугольным дном. От 10 см до 60 см по высоте. Материалы: картон, крафт-бумага. Различные расцветки и дизайн.
+                                </p>
+                                <a href="#" class="asf">
+                                    <p class="section__three-list-item-edition-text">
+                                    Подробнее →
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="section__three-list-item">
+                                <img src="/images/cases.svg" alt="bags-pic" class="section__three-item-img">
+                                <p class="section__three-list-item-head-text">
+                                    Упаковка
+                                </p>
+                                <p class="section__three-list-item-edition-text">
+                                    Тираж: от 30 штук
+                                </p>
+                                <p class="section__three-list-item-edition-text">
+                                    Подойдет для документов и других бумаг. Различные расцветки, размеры и плотность. Материал: прессованная бумага.
+                                </p>
+                                <a href="#" class="asf">
+                                    <p class="section__three-list-item-edition-text">
+                                    Подробнее →
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="section__three-list-item">
+                                <img src="/images/other-package.svg" alt="bags-pic" class="section__three-item-img">
+                                <p class="section__three-list-item-head-text">
+                                    Упаковка
+                                </p>
+                                <p class="section__three-list-item-edition-text">
+                                    Тираж: от 100 штук
+                                </p>
+                                <p class="section__three-list-item-edition-text">
+                                    Нестандартные упаковки, кейсы и другие изделия различных размеров и конфигураций. Изготовим в кратчайшие сроки.
+                                </p>
+                                <a href="#" class="asf">
+                                    <p class="section__three-list-item-edition-text">
+                                    Подробнее →
+                                    </p>
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+            <div class="container__colorless">
+                <div class="main__four">
+                    <section class="section__four">
+                        <ul class="section__four-list">
+                            <li class="section__four-list-item">
+                                <img src="/images/hahnemuhle-logo.svg" alt="brand-logos" class="section__four-item-img">
+                            </li>
+                            <li class="section__four-list-item">
+                                <img src="/images/canson-logo.svg" alt="brand-logos" class="section__four-item-img">
+                            </li>
+                            <li class="section__four-list-item">
+                                <img src="/images/royal-talent-logo.svg" alt="brand-logos" class="section__four-item-img">
+                            </li>
+                            <li class="section__four-list-item">
+                                <img src="/images/fabriano-logo.svg" alt="brand-logos" class="section__four-item-img">
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+            <div class="container">
+                <div class="main__five">
+                    <section class="section__five">
+                        <div class="section__five-head">
+                            <h1 class="section__five-head-text">
+                                Simple скетчбук
+                            </h1>
+                            <p class="section__five-head-termin">
+                                80 листов, твердая обложка, бумага Fabriano 200 г/м2. Подойдет и для графики и для
+                                акварели. Для самых смелых творческих замыслов!
+                            </p>
+                        </div>
+                        <div class="buy__button">
+                            <a href="#" class="buy__button-link">
+                            <button type="button" class="buy__button-item">Купить</button>
+                            </a>
+                    </section>
+                    <section class="section__five-photo">
+                        <img src="images/book-photo.svg" alt="Book-photo" class="book__photo">
                     </section>
                 </div>
             </div>
