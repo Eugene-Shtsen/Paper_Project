@@ -16,7 +16,10 @@ ul {
 
 html,
 body {
-    height: 100%;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    min-width: 100vw;
 }
 
 a {
@@ -32,6 +35,7 @@ header {
 .container {
     margin: 0 auto;
     padding: 0 auto;
+    max-width: 1440px; /* добавили максимальную ширину */
     background-color: #fff;
 }
 
@@ -62,6 +66,7 @@ body {
     padding-bottom: 28px;
     padding-left: 165px;
     padding-right: 165px;
+    
 }
 
 .logo-img {
@@ -73,6 +78,7 @@ body {
 .menu__list {
     display: flex;
     gap: 60px;
+    flex-wrap: wrap;
 }
 
 .menu__link-img,
@@ -105,4 +111,40 @@ body {
 .footer__text-item {
     color: #4C5866;
     font-size: 13px;
+}
+
+@media (max-width: 768px) {
+    .header__inner-flex,
+    .footer__menu {
+        flex-direction: column; /* стек вертикально на мобильных */
+        align-items: center;
+        padding: 28px 16px; /* уменьшаем отступы */
+    }
+    
+    .menu__list {
+        gap: 20px; /* уменьшаем отступы между элементами */
+    }
+    .footer__menu-list {
+        flex-wrap: wrap; /* добавляем перенос элементов */
+        justify-content: center;
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 12px; /* минимальные отступы для очень маленьких экранов */
+    }
+    
+    .menu__list {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 1135px) {
+    .header__inner-flex {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center; /* Равномерное распределение с отступами */
+    }
 }
