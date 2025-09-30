@@ -1,5 +1,7 @@
 html {
     box-sizing: border-box;
+    min-width: 100%;
+    min-height: 100vh;
 }
 
 *,
@@ -36,9 +38,6 @@ footer, header, hgroup, menu, nav, section {
     display: block;
 }
 
-body {
-    line-height: 1;
-}
 
 ol, ul {
     list-style: none;
@@ -135,7 +134,16 @@ header {
     max-height: 23px;
 }
 
-.menu__list,
+.menu{
+    display: flex;
+    gap: 60px;
+}
+
+.menu__link-img-768{
+    display: none;
+}
+
+
 .footer__menu-list,
 .menu__link-img {
     display: flex;
@@ -143,6 +151,7 @@ header {
 }
 
 .menu__list {
+    display: flex;
     flex-wrap: wrap;
     gap: 60px;
 }
@@ -301,9 +310,12 @@ header {
 .section__three-list,
 .section__four-list {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    gap: 30px;
+    align-items: center;
     padding: 90px 165px;
+    gap: 30px;
+    margin: 0;
 }
 
 .section__three-list {
@@ -398,40 +410,60 @@ header {
     font-size: 13px;
 }
 
-/*
-@media (max-width: 1135px) {
-    .header__inner-flex {
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
+@media (max-width: 1420px) {
+    .section__one-head-text{
+        font-size: 50px;
     }
 }
 
-@media (max-width: 768px) {
-    .main__title,
-    .header__inner-flex,
-    .footer__menu {
+@media (max-width: 1367px) {
+    .header__inner-flex{
         flex-direction: column;
-        align-items: center;
-        padding: 28px 16px;
-    }
-    
-    .menu__list {
-        gap: 20px;
+        padding: 10px 0 20px 0;
     }
 
-    .footer__menu-list {
-        flex-wrap: wrap;
-        justify-content: center;
+    .menu__link-img-768 {
+        display: flex;
+        gap: 30px;
+    }
+
+    .menu__link-img {
+        display: none;
+    }
+
+    .header__inner-logo {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 11px;
+        margin: 0 35px;
+    }
+
+    .menu   {
+        flex-direction: column;
+        border-top: 1px solid #DDDDDD;
+    }
+
+    .menu__list {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 18px;
+        margin: 0 35px;
+        gap: 0;
     }
 }
 
-@media (max-width: 480px) {
-    .container {
-        padding: 0 12px;
+@media (max-width: 597px) {
+
+    .header__inner-logo,
+    .menu__list{
+        margin: 0 33px;
     }
-    
-    .menu__list {
-        gap: 15px;
+
+    .header__inner-flex{
+        padding: 11px 0 18px 0;
     }
-} */
+
+    .header__inner-logo {
+        padding-bottom: 10px;
+    }
+}
