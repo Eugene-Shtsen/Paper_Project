@@ -1,7 +1,5 @@
 html {
     box-sizing: border-box;
-    min-width: 100%;
-    min-height: 100vh;
 }
 
 *,
@@ -269,6 +267,8 @@ header {
     line-height: 1.5;
     font-weight: 500;
     color: #666666;
+
+    
 }
 
 .section__two-up-text-two {
@@ -313,13 +313,36 @@ header {
     padding: 20px 0 29px;
 }
 
+.section__four{
+    padding: 90px 165px;   
+}
+
+.section__four-item-img-768,
+.section__four-item-img-576,
+.section__four-item-img-320,
+.main__photo-576,
+.main__photo-768 {
+    opacity: 0;         
+    max-height: 0; 
+    overflow: hidden;
+}
+
+
+.section__four-item-img,
+.main__photo{
+    transition: 
+        opacity 0.5s ease,
+        max-height 0.5s ease;
+}
+
+
+
 .section__three-list,
 .section__four-list {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 90px 165px;
     gap: 30px;
     margin: 0;
 }
@@ -375,7 +398,7 @@ header {
 }
 
 .section__five-head-text {
-    font-size: 40px;
+    font-size: 1.13em;
     line-height: 1;
     font-weight: 400;
     color: #666666;
@@ -474,18 +497,6 @@ header {
     }
 }
 
-.main__photo-576,
-.main__photo-768 {
-    opacity: 0;         
-    max-height: 0; 
-    overflow: hidden;
-}
-
-.main__photo{
-    transition: 
-        opacity 0.5s ease,
-        max-height 0.5s ease;
-}
 
 
 
@@ -524,3 +535,23 @@ header {
 
 }
 
+@media screen and (max-width: 1439px) and (min-width: 768px) {
+
+    .section__four{
+        padding: 60px 39px;
+        margin: 0 auto;   
+    }
+
+    .section__four-item-img {
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    .section__four-item-img-768 {
+        transition: 
+            opacity 0.5s ease;
+        opacity: 1;
+        max-height: 100%;
+    }
+}
