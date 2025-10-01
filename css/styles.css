@@ -125,7 +125,11 @@ header {
 .footer__menu {
     display: flex;
     justify-content: space-between;
-    padding: 28px 165px;
+    padding: 28px 0;
+}
+
+.header__inner-logo{
+    margin-left: 165px;
 }
 
 .logo-img {
@@ -148,6 +152,8 @@ header {
 .menu__link-img {
     display: flex;
     gap: 30px;
+    margin-right: 165px;
+
 }
 
 .menu__list {
@@ -167,8 +173,8 @@ header {
 
 .main__title,
 .section__two-down-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    justify-content: space-between;
     gap: 125px;
     padding-top: 60px;
 }
@@ -178,7 +184,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-left: 165px;
+    margin-left: 165px;
 }
 
 .section__five {
@@ -230,8 +236,8 @@ header {
 
 .section__one-photo {
     display: flex;
-    justify-content: flex-end;
-    padding-right: 165px;
+    justify-content: flex-start;
+    margin-right: 165px;
 }
 
 .section__two-up-list {
@@ -410,13 +416,8 @@ header {
     font-size: 13px;
 }
 
-@media (max-width: 1420px) {
-    .section__one-head-text{
-        font-size: 50px;
-    }
-}
 
-@media (max-width: 1367px) {
+@media (max-width: 1200px) {
     .header__inner-flex{
         flex-direction: column;
         padding: 10px 0 20px 0;
@@ -450,6 +451,11 @@ header {
         margin: 0 35px;
         gap: 0;
     }
+
+    .section__one-head-text{
+        font-size: 50px;
+    }
+
 }
 
 @media (max-width: 597px) {
@@ -467,3 +473,54 @@ header {
         padding-bottom: 10px;
     }
 }
+
+.main__photo-576,
+.main__photo-768 {
+    opacity: 0;         
+    max-height: 0; 
+    overflow: hidden;
+}
+
+.main__photo{
+    transition: 
+        opacity 0.5s ease,
+        max-height 0.5s ease;
+}
+
+
+
+
+@media screen and (max-width: 768px) and (min-width: 576px) {
+
+    .main__photo {
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    .main__photo-768 {
+        transition: 
+            opacity 0.5s ease;
+        opacity: 1;
+        max-height: 100%;
+    }
+}
+
+@media screen and (max-width: 576px) and (min-width: 320px) {
+    
+    .main__photo-768,
+    .main__photo {
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    .main__photo-576 {
+        transition: 
+            opacity 0.5s ease;
+        opacity: 1;
+        max-height: 100%;
+    }
+
+}
+
