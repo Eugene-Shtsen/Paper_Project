@@ -18,45 +18,45 @@
 <body>
     <div class="wrapper">
         <header class="header">
-            <div class="container">
+            <div class="container-header">
                 <div class="header__inner-flex">
+                    <!-- <-- moved here: input first so ~ selectors могут работать -->
+                    
+
                     <div class="header__inner-logo">
-                        <a href="#" class="logo">
-                            <img src="images/logo.svg" alt="logo" class="logo-img">
-                        </a>
-                    </div>
-                    <nav class="menu">
-                        <ul class="menu__list">
-                            <li class="menu__list-item">
-                                <a href="#" class="item__link">Продукция</a>
-                            </li>
-                            <li class="menu__list-item">
-                                <a href="#" class="item__link">Материалы</a>
-                            </li>
-                            <li class="menu__list-item">
-                                <a href="#" class="item__link">О нас</a>
-                            </li>
-                            <li class="menu__list-item">
-                                <a href="#" class="item__link">Контакты</a>
-                            </li>
-                            <ul class="menu__link-img">
-                                <li class="menu__list-item">
-                                    <a href="#" class="item_link">
-                                        <img src="images/link-1.svg" alt="link" class="menu__list-img">
-                                    </a>
-                                </li>
-                                <li class="menu__list-item">
-                                    <a href="#" class="item_link">
-                                        <img src="images/link-2.svg" alt="link" class="menu__list-img">
-                                    </a>
-                                </li>
-                            </ul>
+                        <a href="#" class="logo"><img src="images/logo.svg" class="logo-img" alt=""></a>
+
+                        <!-- эти иконки видны на tablet/desktop; на mobile они будут скрываться при открытии menu -->
+                        <ul class="menu__link-img-768">
+                            <li><a href="#"><img src="images/nav__search-button.svg" alt=""></a></li>
+                            <li><a href="#"><img src="images/nav__login-button.svg" alt=""></a></li>
                         </ul>
-                    </nav>
-                </div>
+                    </div>
+
+                    <div class="menu">
+                        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+                        <!-- label остаётся внутри menu и по for связывается с input -->
+                        <label for="menu-toggle" class="burger" aria-label="Toggle menu">
+                            <span></span><span></span><span></span>
+                        </label>
+
+                        <ul class="menu__list">
+                            <li class="menu__list-item"><a class="item__link" href="#">Продукция</a></li>
+                            <li class="menu__list-item"><a class="item__link" href="#">Материалы</a></li>
+                            <li class="menu__list-item"><a class="item__link" href="#">О нас</a></li>
+                            <li class="menu__list-item"><a class="item__link" href="#">Контакт</a></li>
+                        </ul>
+
+                        <ul class="menu__link-img">
+                            <li><a href="#"><img src="images/nav__search-button.svg" alt=""></a></li>
+                            <li><a href="#"><img src="images/nav__login-button.svg" alt=""></a></li>
+                        </ul>
+                    </div> <!-- .menu -->
+                </div><!-- .header__inner-flex -->
             </div>
         </header>
         <main class="main">
+            <!--
             <div class="container">
                 <div class="main__title">
                     <section class="section__one">
@@ -76,8 +76,8 @@
                     </section>
                     <section class="section__one-photo">
                         <img src="images/main-photo.svg" alt="Main-photo" class="main__photo">
-                        <img src="images/main-photo-768.svg" alt="Main-photo" class="main__photo-768">
-                        <img src="images/main-photo-576.svg" alt="Main-photo" class="main__photo-576">
+                        <img src="images-768-res/main-photo-768-res.svg" alt="Main-photo" class="main__photo-768">
+                        <img src="images-576-res/main-photo-576-res.svg" alt="Main-photo" class="main__photo-576">
                     </section>
                 </div>
             </div>
@@ -125,8 +125,6 @@
                     <section class="section__two-down">
                         <div class="section__two-down-list">
                             <section class="section__two-down-photo">
-                                <img src="images/section__two-down.svg" alt="S_two_photo"
-                                    class="section__two-down-item-img">
                                 <img src="images/section__two-down.svg" alt="S_two_photo"
                                     class="section__two-down-item-img">
                             </section>
@@ -237,16 +235,27 @@
                         <ul class="section__four-list">
                             <li class="section__four-list-item">
                                 <img src="/images/hahnemuhle-logo.svg" alt="brand-logos" class="section__four-item-img">
+                                <img src="/images-768-res/hahnemuhle-logo-768-res.svg" alt="brand-logos" class="section__four-item-img-768">
+                                <img src="/images-576-res/hahnemuhle-logo-576-res.svg" alt="brand-logos" class="section__four-item-img-576">
+                                <img src="/images-320-res/hahnemuhle-logo-320-res.svg" alt="brand-logos" class="section__four-item-img-320">
                             </li>
                             <li class="section__four-list-item">
                                 <img src="/images/canson-logo.svg" alt="brand-logos" class="section__four-item-img">
+                                <img src="/images-768-res/canson-logo-768-res.svg" alt="brand-logos" class="section__four-item-img-768">
+                                <img src="/images-576-res/canson-logo-576-res.svg" alt="brand-logos" class="section__four-item-img-576">
+                                <img src="/images-320-res/canson-logo-320-res.svg" alt="brand-logos" class="section__four-item-img-320">
                             </li>
                             <li class="section__four-list-item">
-                                <img src="/images/royal-talent-logo.svg" alt="brand-logos"
-                                    class="section__four-item-img">
+                                <img src="/images/royal-talent-logo.svg" alt="brand-logos" class="section__four-item-img">
+                                <img src="/images-768-res/royal-talent-logo-768-res.svg" alt="brand-logos" class="section__four-item-img-768">
+                                <img src="/images-576-res/royal-talent-logo-576-res.svg" alt="brand-logos" class="section__four-item-img-576">
+                                <img src="/images-320-res/royal-talent-logo-320-res.svg" alt="brand-logos" class="section__four-item-img-320">
                             </li>
                             <li class="section__four-list-item">
                                 <img src="/images/fabriano-logo.svg" alt="brand-logos" class="section__four-item-img">
+                                <img src="/images-768-res/fabriano-logo-768-res.svg" alt="brand-logos" class="section__four-item-img-768">
+                                <img src="/images-576-res/fabriano-logo-576-res.svg" alt="brand-logos" class="section__four-item-img-576">
+                                <img src="/images-320-res/fabriano-logo-320-res.svg" alt="brand-logos" class="section__four-item-img-320">
                             </li>
                         </ul>
                     </section>
@@ -274,41 +283,40 @@
                     </section>
                 </div>
             </div>
+        -->
         </main>
         <footer class="footer">
+            <div class="container__darkgrey">
+                <nav class="footer__menu">
+                    <div class="footer__menu-logo">
+                        <img src="/images/footer-logo.svg" alt="logo" class="footer__logo-img">
+                    </div>
+                    <ul class="footer__menu-list">
+                        <li class="footer__menu-link">
+                            <a href="#" class="footer__link-item">
+                                <img src="/images/footer-facebook.svg" alt="link" class="footer__link-img">
+                            </a>
+                        </li>
+                        <li class="footer__menu-link">
+                            <a href="#" class="footer__link-item">
+                                <img src="/images/footer-X.svg" alt="link" class="footer__link-img">
+                            </a>
+                        </li>
+                        <li class="footer__menu-link">
+                            <a href="#" class="footer__link-item">
+                                <img src="/images/footer-instagram.svg" alt="link" class="footer__link-img">
+                            </a>
+                        </li>
+                        <li class="footer__menu-link">
+                            <a href="#" class="footer__link-item">
+                                <img src="/images/footer-YT.svg" alt="link" class="footer__link-img">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
             <div class="container">
-                <ul class="footer__inner">
-                    <nav class="footer__menu">
-                        <div class="footer__menu-link">
-                            <img src="/images/footer-logo.svg" alt="logo" class="footer__logo-img">
-                        </div>
-                        <ul class="footer__menu-list">
-                            <li class="footer__menu-link">
-                                <a href="#" class="footer__link-item">
-                                    <img src="/images/footer-facebook.svg" alt="link" class="footer__link-img">
-                                </a>
-                            </li>
-                            <li class="footer__menu-link">
-                                <a href="#" class="footer__link-item">
-                                    <img src="/images/footer-X.svg" alt="link" class="footer__link-img">
-                                </a>
-                            </li>
-                            <li class="footer__menu-link">
-                                <a href="#" class="footer__link-item">
-                                    <img src="/images/footer-instagram.svg" alt="link" class="footer__link-img">
-                                </a>
-                            </li>
-                            <li class="footer__menu-link">
-                                <a href="#" class="footer__link-item">
-                                    <img src="/images/footer-YT.svg" alt="link" class="footer__link-img">
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <li class="footer__text">
-                        <p class="footer__text-item">SIMPLE ® 2021</p>
-                    </li>
-                </ul>
+                <p class="footer__text-item">SIMPLE ® 2021</p>
             </div>
         </footer>
     </div>
