@@ -18,88 +18,59 @@
 <body>
     <div class="wrapper">
         <header class="header">
-            <div class="container">
+            <div class="container-header">
                 <div class="header__inner-flex">
                     <div class="header__inner-logo">
-                        <a href="#" class="logo">
-                            <img src="images/logo.svg" alt="logo" class="logo-img">
-                        </a>
+                        <a href="#" class="logo"><img src="images/logo.svg" class="logo-img" alt=""></a>
                         <ul class="menu__link-img-768">
-                            <li class="menu__list-item">
-                                <a href="#" class="item_link">
-                                    <img src="images/nav__search-button.svg" alt="link" class="menu__list-img">
-                                </a>
-                            </li>
-                                <li class="menu__list-item">
-                                <a href="#" class="item_link">
-                                    <img src="images/nav__login-button.svg" alt="link" class="menu__list-img">
-                                </a>
-                            </li>
+                            <li><a href="#"><img src="images/nav__search-button.svg" alt=""></a></li>
+                            <li><a href="#"><img src="images/nav__login-button.svg" alt=""></a></li>
                         </ul>
                     </div>
                     <div class="menu">
-                        <input type="checkbox" id="menu-toggle" class="menu-toggle">
-                        <label for="menu-toggle" class="burger">
+                        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+                        <label for="menu-toggle" class="burger" aria-label="Toggle menu">
                             <span></span>
                             <span></span>
                             <span></span>
                         </label>
                         <ul class="menu__list">
-                            <li class="menu__list-item">
-                                <a href="#" class="item__link">Продукция</a>
-                            </li>
-                            <li class="menu__list-item">
-                                <a href="#" class="item__link">Материалы</a>
-                            </li>
-                            <li class="menu__list-item">
-                                <a href="#" class="item__link">О нас</a>
-                            </li>
-                            <li class="menu__list-item">
-                                <a href="#" class="item__link">Контакт</a>
-                            </li>
+                            <li class="menu__list-item"><a class="item__link" href="#">Продукция</a></li>
+                            <li class="menu__list-item"><a class="item__link" href="#">Материалы</a></li>
+                            <li class="menu__list-item"><a class="item__link" href="#">О нас</a></li>
+                            <li class="menu__list-item"><a class="item__link" href="#">Контакт</a></li>
                         </ul>
                         <ul class="menu__link-img">
-                            <li class="menu__list-item">
-                                <a href="#" class="item_link">
-                                    <img src="images/nav__search-button.svg" alt="link" class="menu__list-img">
-                                </a>
-                            </li>
-                                <li class="menu__list-item">
-                                <a href="#" class="item_link">
-                                    <img src="images/nav__login-button.svg" alt="link" class="menu__list-img">
-                                </a>
-                            </li>
+                            <li><a href="#"><img src="images/nav__search-button.svg" alt=""></a></li>
+                            <li><a href="#"><img src="images/nav__login-button.svg" alt=""></a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </header>
         <main class="main">
-            <!--
             <div class="container">
                 <div class="main__title">
                     <section class="section__one">
-                        <div class="section__one-head">
-                            <h1 class="section__one-head-text">
-                                Простые вещи. Из бумаги
-                            </h1>
-                            <p class="section__one-head-termin">
-                                Бума́га (предположительно от итал. bombagia, первоисточником же считается иранский) —
-                                волокнистый материал с минеральными добавками.
-                            </p>
-                        </div>
+                        <h1 class="section__one-head-text">Простые вещи. Из бумаги</h1> 
+                        <p class="section__one-head-termin">
+                            Бума́га (предположительно от итал. bombagia, первоисточником же считается иранский) —
+                            волокнистый материал с минеральными добавками.
+                        </p>
                         <div class="catalogue__button">
                             <a href="#" class="catalogue__button-link">
                                 <button type="button" class="catalogue__button-item">Каталог</button>
                             </a>
                     </section>
                     <section class="section__one-photo">
-                        <img src="images/main-photo.svg" alt="Main-photo" class="main__photo">
-                        <img src="images-768-res/main-photo-768-res.svg" alt="Main-photo" class="main__photo-768">
-                        <img src="images-576-res/main-photo-576-res.svg" alt="Main-photo" class="main__photo-576">
+                        <picture>
+                            <source srcset="images-576-res/main-photo.svg" media="(max-width: 655px)">
+                            <source srcset="images-768-res/main-photo.svg" media="(max-width: 1100px)">
+                            <img src="images/main-photo.svg" alt="Main-photo" class="main__photo">   
+                        </picture>  
                     </section>
                 </div>
-            </div>
+            </div><!--
             <div class="container__colorless">
                 <div class="main__two">
                     <section class="section__two-up">
@@ -301,8 +272,7 @@
                         <img src="images/book-photo.svg" alt="Book-photo" class="book__photo">
                     </section>
                 </div>
-            </div>
-        -->
+            </div>  -->
         </main>
         <footer class="footer">
             <div class="container__darkgrey">
@@ -336,7 +306,7 @@
             </div>
             <div class="container">
                 <p class="footer__text-item">SIMPLE ® 2021</p>
-            </div>        
+            </div>
         </footer>
     </div>
 </body>
