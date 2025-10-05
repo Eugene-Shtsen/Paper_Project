@@ -14,6 +14,26 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const picture = document.querySelector(".section__one-photo picture");
+        const img = picture.querySelector("img");
+        let currentSrc = img.currentSrc;
+
+        window.addEventListener("resize", () => {
+            const newSrc = img.currentSrc;
+            if (newSrc !== currentSrc) {
+                img.classList.add("fade-out");
+
+                setTimeout(() => {
+                    currentSrc = newSrc;
+                    img.classList.remove("fade-out");
+                }, 200);
+            }
+        });
+    });
+</script>
+
 
 <body>
     <div class="wrapper">
@@ -52,7 +72,7 @@
             <div class="container">
                 <div class="main__title">
                     <section class="section__one">
-                        <h1 class="section__one-head-text">Простые вещи. Из бумаги</h1> 
+                        <h1 class="section__one-head-text">Простые вещи. Из бумаги</h1>
                         <p class="section__one-head-termin">
                             Бума́га (предположительно от итал. bombagia, первоисточником же считается иранский) —
                             волокнистый материал с минеральными добавками.
@@ -61,23 +81,28 @@
                             <a href="#" class="catalogue__button-link">
                                 <button type="button" class="catalogue__button-item">Каталог</button>
                             </a>
+                        </div>
                     </section>
                     <section class="section__one-photo">
                         <picture>
-                            <source srcset="images-576-res/main-photo.svg" media="(max-width: 655px)">
-                            <source srcset="images-768-res/main-photo.svg" media="(max-width: 1100px)">
-                            <img src="images/main-photo.svg" alt="Main-photo" class="main__photo">   
-                        </picture>  
+                            <source srcset="/images-576-res/main-photo.svg" media="(max-width: 655px)">
+                            <source srcset="/images-768-res/main-photo.svg" media="(max-width: 1255px)">
+                            <img src="images/main-photo.svg" alt="Main-photo" class="main__photo">
+                        </picture>
                     </section>
                 </div>
-            </div><!--
-            <div class="container__colorless">
+            </div>
+            <div class="container__grey">
                 <div class="main__two">
                     <section class="section__two-up">
                         <ul class="section__two-up-list">
                             <li class="section__two-up-item">
-                                <img src="/images/section__two-up-v1.svg" alt="Image_1"
-                                    class="section__two-up-item-img">
+                                <picture>
+                                    <source srcset="images-320-res/section__two-up-v1.svg" media="(max-width: 575px)">
+                                    <source srcset="images-576-res/section__two-up-v1.svg" media="(max-width: 655px)">
+                                    <img src="/images/section__two-up-v1.svg" alt="Image_1"
+                                        class="section__two-up-item-img">
+                                </picture>
                                 <div class="section_two-up-item-text">
                                     <p class="section__two-up-text-one">
                                         V.1
@@ -87,8 +112,12 @@
                                     </p>
                                 </div>
                             <li class="section__two-up-item">
-                                <img src="/images/section__two-up-v2.svg" alt="Image_1"
-                                    class="section__two-up-item-img">
+                                <picture>
+                                    <source srcset="/images-320-res/section__two-up-v2.svg" media="(max-width: 575px)">
+                                    <source srcset="/images-576-res/section__two-up-v2.svg" media="(max-width: 655px)">
+                                    <img src="/images/section__two-up-v2.svg" alt="Image_1"
+                                        class="section__two-up-item-img">
+                                </picture>
                                 <div class="section_two-up-item-text">
                                     <p class="section__two-up-text-one">
                                         V.2
@@ -99,8 +128,12 @@
                                 </div>
                             </li>
                             <li class="section__two-up-item">
-                                <img src="/images/section__two-up-v3.svg" alt="Image_1"
-                                    class="section__two-up-item-img">
+                                <picture>
+                                    <source srcset="/images-320-res/section__two-up-v3.svg" media="(max-width: 575px)">
+                                    <source srcset="/images-576-res/section__two-up-v3.svg" media="(max-width: 655px)">
+                                    <img src="/images/section__two-up-v3.svg" alt="Image_1"
+                                        class="section__two-up-item-img">
+                                </picture>
                                 <div class="section_two-up-item-text">
                                     <p class="section__two-up-text-one">
                                         V.3
@@ -114,11 +147,15 @@
                     </section>
                     <section class="section__two-down">
                         <div class="section__two-down-list">
-                            <section class="section__two-down-photo">
-                                <img src="images/section__two-down.svg" alt="S_two_photo"
-                                    class="section__two-down-item-img">
-                            </section>
-                            <section class="section__two-down-text-list">
+                            <div class="section__two-down-photo">
+                                <picture>
+                                    <source srcset="/images-320-res/section__two-down.svg" media="(max-width: 575px)">
+                                    <source srcset="/images-576-res/section__two-down.svg" media="(max-width: 1330px)">
+                                    <img src="/images/section__two-down.svg" alt="Image_1"
+                                        class="section__two-down-item-img">
+                                </picture>
+                            </div>
+                            <div class="section__two-down-text-list">
                                 <div class="section__two-down-text-header">
                                     <h1 class="section__two-down-header-item">
                                         Максимальная белизна
@@ -134,7 +171,7 @@
                                         капроновая сетка.
                                     </p>
                                 </div>
-                            </section>
+                            </div>
                         </div>
                     </section>
                 </div>
@@ -144,7 +181,12 @@
                     <section class="section__three">
                         <ul class="section__three-list">
                             <li class="section__three-list-item">
-                                <img src="/images/package-photo.svg" alt="bags-pic" class="section__three-item-img">
+                                <picture>
+                                    <source srcset="/images-320-res/package-photo.svg" media="(max-width: 575px)">
+                                    <source srcset="/images-576-res/package-photo.svg" media="(max-width: 767px)">
+                                    <source srcset="/images-768-res/package-photo.svg" media="(max-width: 1439px)">
+                                    <img src="/images/package-photo.svg" alt="bags-pic" class="section__three-item-img">
+                                </picture>
                                 <p class="section__three-list-item-head-text">
                                     Упаковка
                                 </p>
@@ -162,7 +204,12 @@
                                 </a>
                             </li>
                             <li class="section__three-list-item">
-                                <img src="/images/plastic-bag.svg" alt="bags-pic" class="section__three-item-img">
+                                <picture>
+                                    <source srcset="/images-320-res/plastic-bag.svg" media="(max-width: 575px)">
+                                    <source srcset="/images-576-res/plastic-bag.svg" media="(max-width: 767px)">
+                                    <source srcset="/images-768-res/plastic-bag.svg" media="(max-width: 1439px)">
+                                    <img src="/images/plastic-bag.svg" alt="bags-pic" class="section__three-item-img">
+                                </picture>
                                 <p class="section__three-list-item-head-text">
                                     Пакеты
                                 </p>
@@ -180,7 +227,12 @@
                                 </a>
                             </li>
                             <li class="section__three-list-item">
-                                <img src="/images/cases.svg" alt="bags-pic" class="section__three-item-img">
+                                <picture>
+                                    <source srcset="/images-320-res/cases.svg" media="(max-width: 575px)">
+                                    <source srcset="/images-576-res/cases.svg" media="(max-width: 767px)">
+                                    <source srcset="/images-768-res/cases.svg" media="(max-width: 1439px)">
+                                    <img src="/images/cases.svg" alt="bags-pic" class="section__three-item-img">
+                                </picture>
                                 <p class="section__three-list-item-head-text">
                                     Кейсы
                                 </p>
@@ -198,7 +250,12 @@
                                 </a>
                             </li>
                             <li class="section__three-list-item">
-                                <img src="/images/other-package.svg" alt="bags-pic" class="section__three-item-img">
+                                <picture>
+                                    <source srcset="/images-320-res/other-package.svg" media="(max-width: 575px)">
+                                    <source srcset="/images-576-res/other-package.svg" media="(max-width: 767px)">
+                                    <source srcset="/images-768-res/other-package.svg" media="(max-width: 1439px)">
+                                    <img src="/images/other-package.svg" alt="bags-pic" class="section__three-item-img">
+                                </picture>
                                 <p class="section__three-list-item-head-text">
                                     Другие изделия
                                 </p>
@@ -219,60 +276,83 @@
                     </section>
                 </div>
             </div>
-            <div class="container__colorless">
+            <div class="container__grey">
                 <div class="main__four">
-                    <section class="section__four">
-                        <ul class="section__four-list">
-                            <li class="section__four-list-item">
+                    <ul class="section__four-list">
+                        <li class="section__four-list-item">
+                            <picture>
+                                <source srcset="/images-320-res/hahnemuhle-logo.svg" media="(max-width: 575px)">
+                                <source srcset="/images-576-res/hahnemuhle-logo.svg" media="(max-width: 767px)">
+                                <source srcset="/images-768-res/hahnemuhle-logo.svg" media="(max-width: 1439px)">
                                 <img src="/images/hahnemuhle-logo.svg" alt="brand-logos" class="section__four-item-img">
-                                <img src="/images-768-res/hahnemuhle-logo-768-res.svg" alt="brand-logos" class="section__four-item-img-768">
-                                <img src="/images-576-res/hahnemuhle-logo-576-res.svg" alt="brand-logos" class="section__four-item-img-576">
-                                <img src="/images-320-res/hahnemuhle-logo-320-res.svg" alt="brand-logos" class="section__four-item-img-320">
-                            </li>
-                            <li class="section__four-list-item">
+                            </picture>
+                        </li>
+                        <li class="section__four-list-item">
+                            <picture>
+                                <source srcset="/images-320-res/canson-logo.svg" media="(max-width: 575px)">
+                                <source srcset="/images-576-res/canson-logo.svg" media="(max-width: 767px)">
+                                <source srcset="/images-768-res/canson-logo.svg" media="(max-width: 1439px)">
                                 <img src="/images/canson-logo.svg" alt="brand-logos" class="section__four-item-img">
-                                <img src="/images-768-res/canson-logo-768-res.svg" alt="brand-logos" class="section__four-item-img-768">
-                                <img src="/images-576-res/canson-logo-576-res.svg" alt="brand-logos" class="section__four-item-img-576">
-                                <img src="/images-320-res/canson-logo-320-res.svg" alt="brand-logos" class="section__four-item-img-320">
-                            </li>
-                            <li class="section__four-list-item">
-                                <img src="/images/royal-talent-logo.svg" alt="brand-logos" class="section__four-item-img">
-                                <img src="/images-768-res/royal-talent-logo-768-res.svg" alt="brand-logos" class="section__four-item-img-768">
-                                <img src="/images-576-res/royal-talent-logo-576-res.svg" alt="brand-logos" class="section__four-item-img-576">
-                                <img src="/images-320-res/royal-talent-logo-320-res.svg" alt="brand-logos" class="section__four-item-img-320">
-                            </li>
-                            <li class="section__four-list-item">
+                            </picture>
+                        </li>
+                        <li class="section__four-list-item">
+                            <picture>
+                                <source srcset="/images-320-res/royal-talent-logo.svg" media="(max-width: 575px)">
+                                <source srcset="/images-576-res/royal-talent-logo.svg" media="(max-width: 767px)">
+                                <source srcset="/images-768-res/royal-talent-logo.svg" media="(max-width: 1439px)">
+                                <img src="/images/royal-talent-logo.svg" alt="brand-logos"
+                                    class="section__four-item-img">
+                            </picture>
+                        </li>
+                        <li class="section__four-list-item">
+                            <picture>
+                                <source srcset="/images-320-res/fabriano-logo.svg" media="(max-width: 575px)">
+                                <source srcset="/images-576-res/fabriano-logo.svg" media="(max-width: 767px)">
+                                <source srcset="/images-768-res/fabriano-logo.svg" media="(max-width: 1439px)">
                                 <img src="/images/fabriano-logo.svg" alt="brand-logos" class="section__four-item-img">
-                                <img src="/images-768-res/fabriano-logo-768-res.svg" alt="brand-logos" class="section__four-item-img-768">
-                                <img src="/images-576-res/fabriano-logo-576-res.svg" alt="brand-logos" class="section__four-item-img-576">
-                                <img src="/images-320-res/fabriano-logo-320-res.svg" alt="brand-logos" class="section__four-item-img-320">
-                            </li>
-                        </ul>
-                    </section>
+                            </picture>
+                        </li>
+                    </ul>
+                    <div class="section__four-slider">
+                        <div class="brands-slide">
+                            <img src="/images-320-res/hahnemuhle-logo.svg" alt="brand-logo">
+                            <img src="/images-320-res/canson-logo.svg" alt="brand-logo">
+                            <img src="/images-320-res/royal-talent-logo.svg" alt="brand-logo">
+                            <img src="/images-320-res/fabriano-logo.svg" alt="brand-logo">
+                            <img src="/images-320-res/hahnemuhle-logo.svg" alt="brand-logo">
+                            <img src="/images-320-res/canson-logo.svg" alt="brand-logo">
+                            <img src="/images-320-res/royal-talent-logo.svg" alt="brand-logo">
+                            <img src="/images-320-res/fabriano-logo.svg" alt="brand-logo">                           
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="container">
+            <div class="container container-none-right">
                 <div class="main__five">
                     <section class="section__five">
-                        <div class="section__five-head">
-                            <h1 class="section__five-head-text">
-                                Simple скетчбук
-                            </h1>
-                            <p class="section__five-head-termin">
-                                80 листов, твердая обложка, бумага Fabriano 200 г/м2. Подойдет и для графики и для
-                                акварели. Для самых смелых творческих замыслов!
-                            </p>
-                        </div>
+                        <h2 class="section__five-head-text">
+                            Simple скетчбук
+                        </h2>
+                        <p class="section__five-head-termin">
+                            80 листов, твердая обложка, бумага Fabriano 200 г/м2. Подойдет и для графики и для
+                            акварели. Для самых смелых творческих замыслов!
+                        </p>
                         <div class="buy__button">
                             <a href="#" class="buy__button-link">
                                 <button type="button" class="buy__button-item">Купить</button>
                             </a>
+                        </div>
                     </section>
                     <section class="section__five-photo">
-                        <img src="images/book-photo.svg" alt="Book-photo" class="book__photo">
+                        <picture>
+                            <source srcset="/images-320-res/book-photo.svg" media="(max-width: 575px)">
+                            <source srcset="/images-576-res/book-photo.svg" media="(max-width: 767px)">
+                            <source srcset="/images-768-res/book-photo.svg" media="(max-width: 1300px)">
+                            <img src="/images/book-photo.svg" alt="Book-photo" class="book__photo">
+                        </picture>                  
                     </section>
                 </div>
-            </div>  -->
+            </div>  
         </main>
         <footer class="footer">
             <div class="container__darkgrey">
