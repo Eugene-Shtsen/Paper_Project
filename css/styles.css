@@ -10,86 +10,13 @@ html {
     padding: 0;
 }
 
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,
+blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,
+img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,
+center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,
+thead,tr,th,td,article,aside,canvas,details,embed,figure,
+figcaption,footer,header,hgroup,menu,nav,output,
+ruby,section,summary,time,mark,audio,
 video {
     margin: 0;
     padding: 0;
@@ -99,16 +26,8 @@ video {
     vertical-align: baseline;
 }
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,
 section {
     display: block;
 }
@@ -159,17 +78,13 @@ header {
     border-bottom: 1px solid #DDDDDD;
 }
 
-img,
-h1,
-h2,
-p {
+img,h1,h2,p {
     display: block;
     list-style: none;
 }
 
 img {
     opacity: 0;
-    transition: opacity 0.5s ease-in-out;
 }
 
 img[src] {
@@ -355,15 +270,7 @@ img[src] {
     height: calc(410px + (100vw - 768px) * (560 - 410) / (1440 - 768));
     max-width: none;
     display: block;
-}
-
-.section__one-photo img {
-    opacity: 1;
-    transition: opacity 0.6s ease;
-}
-
-.section__one-photo img.fade-out {
-    opacity: 0;
+    transition: all 0.3s ease;
 }
 
 /*********************** BUTTON *************************/
@@ -425,9 +332,10 @@ img[src] {
 }
 
 .section__two-up-item-img {
-    max-width: 160px;
-    max-height: 118px;
+    width: 160px;
+    height: 118px;
     display: block;
+    transition: all 0.5s ease;
 }
 
 .section_two-up-item-text {
@@ -480,10 +388,20 @@ img[src] {
 .section__two-down-termin-up {
     padding-top: clamp(14px, calc(14px + (20 - 14) * ((100vw - 576px) / (1440 - 576))), 20px);
     padding-bottom: clamp(12px, calc(12px + (25 - 12) * ((100vw - 576px) / (1440 - 576))), 25px);
-    ;
+}
+
+.section__two-down-item-img{
+    object-fit: cover;
+    object-position: top;
+    width: calc(330px + (100vw - 768px) * (730 - 330) / (1440 - 768));
+    height: calc(256px + (100vw - 768px) * (564 - 256) / (1440 - 768));
+    max-width: none;
+    display: block;
+    transition: all 0.5s ease;
 }
 
 /********************** MAIN THREE *********************/
+
 .section__three-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -532,7 +450,12 @@ img[src] {
     color: #7875FE;
 }
 
+.section__three-item-img{
+    transition: all 0.5s ease;
+}
+
 /********************** MAIN FOUR *********************/
+
 .main__four {
     padding: clamp(60px, calc(60px + (90 - 60) * ((100vw - 768px) / (1440 - 768))), 90px) 0px;
 }
@@ -552,13 +475,13 @@ img[src] {
 
 .section__four-item-img {
     object-fit: contain;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
     width: clamp(150px, 17.7vw, 255px);
     height: clamp(80px, 9.4vw, 135px);
 }
 
-
 /********************** MAIN FIVE *********************/
+
 .main__five {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -598,19 +521,17 @@ img[src] {
     color: #85859B;
 }
 
-
 .book__photo {
     object-fit: cover;
     object-position: left top;
     width: 730px;
     height: 410px;
     display: block;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
     position: relative;
     right: 0;
 
 }
-
 
 .section__five-photo {
     display: flex;
@@ -618,26 +539,9 @@ img[src] {
     align-items: flex-end;
 }
 
-/****************** IMG AMIN *******************/
-
-.section__one-photo picture {
-    position: relative;
-    display: inline-block;
-}
-
-.section__one-photo img {
-    opacity: 1;
-    transition: opacity 0.6s ease;
-}
-
-.section__one-photo img.fade-out {
-    opacity: 0;
-}
-
 /******************* MEDIA ***********************/
 
 @media (min-width: 1440px) {
-
     .container,
     .container__grey,
     .container__darkgrey {
@@ -661,8 +565,11 @@ img[src] {
         row-gap: 60px;
     }
 
+    .section__three-item-img,
+    .section__three-list-item-head-text,
+    .section__three-list-item-edition-grid,
     .section__three-list-item-edition-text {
-        max-width: 330px;
+        width: calc(240px + (330 - 240) * ((100vw - 576px) / (1440 - 576)));
     }
 
     .section__three-list-item-edition-text {
@@ -742,7 +649,6 @@ img[src] {
 }
 
 @media (max-width: 768px) {
-
     .container,
     .container__grey,
     .container__darkgrey,
@@ -773,9 +679,14 @@ img[src] {
     }
 
     .main__photo {
-        width: 270px;
-        height: 410px;
+        width: calc(195px + (100vw - 576px) * (270 - 195) / (768 - 576));
+        height: calc(396px + (100vw - 576px) * (410 - 396) / (768 - 576));
     }
+
+    .section__two-up-item-img {
+        width: calc(130px + (160 - 130) * ((100vw - 320px) / (768 - 320)));
+        height: calc(96px + (118 - 96) * ((100vw - 320px) / (768 - 320)));
+    } 
 }
 
 @media (max-width: 1300px) and (min-width: 768px) {
@@ -896,10 +807,15 @@ img[src] {
     .section__two-down-text-header {
         padding-top: 20px;
     }
+
+    .section__two-down-item-img{
+        width: calc(290px + (100vw - 320px) * (330 - 290) / (655 - 320));
+        height: calc(223px + (100vw - 320px) * (255 - 223) / (655 - 320));
+       
+    }
 }
 
 @media (max-width: 576px) {
-
     .container,
     .container__grey,
     .container__darkgrey,
@@ -976,9 +892,7 @@ img[src] {
     .main__five {
         gap: 0;
     }
-}
 
-@media (max-width: 560px) {
     .menu {
         position: relative;
         width: 100%;
@@ -1143,6 +1057,13 @@ img[src] {
     .section__two-down-photo {
         justify-content: center;
         align-items: center;
+    }
+
+    .section__three-item-img,
+    .section__three-list-item-head-text,
+    .section__three-list-item-edition-grid,
+    .section__three-list-item-edition-text {
+        width: 290px;
     }
 
     .footer__menu {
