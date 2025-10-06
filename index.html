@@ -2,29 +2,27 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <script>
     document.addEventListener("DOMContentLoaded", () => {
-        const picture = document.querySelector(".section__one-photo picture");
-        const img = picture.querySelector("img");
+        const img = document.querySelector(".section__one-photo img");
         let currentSrc = img.currentSrc;
 
         window.addEventListener("resize", () => {
             const newSrc = img.currentSrc;
             if (newSrc !== currentSrc) {
                 img.classList.add("fade-out");
-
                 setTimeout(() => {
                     currentSrc = newSrc;
                     img.classList.remove("fade-out");
@@ -34,25 +32,22 @@
     });
 </script>
 
-
 <body>
     <div class="wrapper">
         <header class="header">
             <div class="container-header">
                 <div class="header__inner-flex">
                     <div class="header__inner-logo">
-                        <a href="#" class="logo"><img src="images/logo.svg" class="Логотип компании" alt=""></a>
+                        <a href="#" class="logo"><img src="images/logo.svg" alt="Логотип компании" /></a>
                         <ul class="menu__link-img-768">
-                            <li><a href="#"><img src="images/nav__search-button.svg" alt="Кнопка поиска"></a></li>
-                            <li><a href="#"><img src="images/nav__login-button.svg" alt="Кнопка логина"></a></li>
+                            <li><a href="#"><img src="images/nav__search-button.svg" alt="Кнопка поиска" /></a></li>
+                            <li><a href="#"><img src="images/nav__login-button.svg" alt="Кнопка логина" /></a></li>
                         </ul>
                     </div>
                     <div class="menu">
                         <input type="checkbox" id="menu-toggle" class="menu-toggle" />
                         <label for="menu-toggle" class="burger" aria-label="Toggle menu">
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                            <span></span><span></span><span></span>
                         </label>
                         <ul class="menu__list">
                             <li class="menu__list-item"><a class="item__link" href="#products">Продукция</a></li>
@@ -61,21 +56,21 @@
                             <li class="menu__list-item"><a class="item__link" href="#contact">Контакт</a></li>
                         </ul>
                         <ul class="menu__link-img">
-                            <li><a href="#"><img src="images/nav__search-button.svg" alt="Кнопка поиска"></a></li>
-                            <li><a href="#"><img src="images/nav__login-button.svg" alt="Кнопка логина"></a></li>
+                            <li><a href="#"><img src="images/nav__search-button.svg" alt="Кнопка поиска" /></a></li>
+                            <li><a href="#"><img src="images/nav__login-button.svg" alt="Кнопка логина" /></a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </header>
+
         <main class="main">
             <div class="container">
                 <div class="main__title">
                     <section class="section__one">
                         <h1 class="section__one-head-text">Простые вещи. Из бумаги</h1>
                         <p class="section__one-head-termin">
-                            Бума́га (предположительно от итал. bombagia, первоисточником же считается иранский) —
-                            волокнистый материал с минеральными добавками.
+                            Бума́га — волокнистый материал с минеральными добавками.
                         </p>
                         <div class="catalogue__button">
                             <a href="#" class="catalogue__button-link">
@@ -84,91 +79,57 @@
                         </div>
                     </section>
                     <section class="section__one-photo">
-                        <picture>
-                            <source srcset="/images-576-res/main-photo.svg" media="(max-width: 655px)">
-                            <source srcset="/images-768-res/main-photo.svg" media="(max-width: 1255px)">
-                            <img src="images/main-photo.svg" alt="Главное фото" class="main__photo">
-                        </picture>
+                        <img src="images/main-photo.svg" alt="Главное фото" class="main__photo" />
                     </section>
                 </div>
             </div>
+
             <div class="container__grey">
                 <div class="main__two">
                     <section id="materials" class="section__two-up">
                         <ul class="section__two-up-list">
                             <li class="section__two-up-item">
-                                <picture>
-                                    <source srcset="images-320-res/section__two-up-v1.svg" media="(max-width: 575px)">
-                                    <source srcset="images-576-res/section__two-up-v1.svg" media="(max-width: 655px)">
-                                    <img src="/images/section__two-up-v1.svg" alt="Результат обучения — вариант 1"
-                                        class="section__two-up-item-img">
-                                </picture>
+                                <img src="/images/section__two-up-v1.svg" alt="Результат обучения — вариант 1"
+                                    class="section__two-up-item-img" />
                                 <div class="section_two-up-item-text">
-                                    <p class="section__two-up-text-one">
-                                        V.1
-                                    </p>
-                                    <p class="section__two-up-text-two">
-                                        Результат вашего обучения
-                                    </p>
-                                </div>
-                            <li class="section__two-up-item">
-                                <picture>
-                                    <source srcset="/images-320-res/section__two-up-v2.svg" media="(max-width: 575px)">
-                                    <source srcset="/images-576-res/section__two-up-v2.svg" media="(max-width: 655px)">
-                                    <img src="/images/section__two-up-v2.svg" alt="Результат обучения — вариант 2"
-                                        class="section__two-up-item-img">
-                                </picture>
-                                <div class="section_two-up-item-text">
-                                    <p class="section__two-up-text-one">
-                                        V.2
-                                    </p>
-                                    <p class="section__two-up-text-two">
-                                        Результат вашего обучения
-                                    </p>
+                                    <p class="section__two-up-text-one">V.1</p>
+                                    <p class="section__two-up-text-two">Результат вашего обучения</p>
                                 </div>
                             </li>
                             <li class="section__two-up-item">
-                                <picture>
-                                    <source srcset="/images-320-res/section__two-up-v3.svg" media="(max-width: 575px)">
-                                    <source srcset="/images-576-res/section__two-up-v3.svg" media="(max-width: 655px)">
-                                    <img src="/images/section__two-up-v3.svg" alt="Результат обучения — вариант 3"
-                                        class="section__two-up-item-img">
-                                </picture>
+                                <img src="/images/section__two-up-v2.svg" alt="Результат обучения — вариант 2"
+                                    class="section__two-up-item-img" />
                                 <div class="section_two-up-item-text">
-                                    <p class="section__two-up-text-one">
-                                        V.3
-                                    </p>
-                                    <p class="section__two-up-text-two">
-                                        Результат вашего обучения
-                                    </p>
+                                    <p class="section__two-up-text-one">V.2</p>
+                                    <p class="section__two-up-text-two">Результат вашего обучения</p>
+                                </div>
+                            </li>
+                            <li class="section__two-up-item">
+                                <img src="/images/section__two-up-v3.svg" alt="Результат обучения — вариант 3"
+                                    class="section__two-up-item-img" />
+                                <div class="section_two-up-item-text">
+                                    <p class="section__two-up-text-one">V.3</p>
+                                    <p class="section__two-up-text-two">Результат вашего обучения</p>
                                 </div>
                             </li>
                         </ul>
                     </section>
+
                     <section class="section__two-down">
                         <div class="section__two-down-list">
                             <div class="section__two-down-photo">
-                                <picture>
-                                    <source srcset="/images-320-res/section__two-down.svg" media="(max-width: 575px)">
-                                    <source srcset="/images-576-res/section__two-down.svg" media="(max-width: 1330px)">
-                                    <img src="/images/section__two-down.svg" alt="Фото композиция - материалы"
-                                        class="section__two-down-item-img">
-                                </picture>
+                                <img src="/images/section__two-down.svg" alt="Фото композиция - материалы"
+                                    class="section__two-down-item-img" />
                             </div>
                             <div class="section__two-down-text-list">
                                 <div class="section__two-down-text-header">
-                                    <h1 class="section__two-down-header-item">
-                                        Максимальная белизна
-                                    </h1>
+                                    <h1 class="section__two-down-header-item">Максимальная белизна</h1>
                                     <p class="section__two-down-termin-up">
                                         Для повышения белизны, гладкости и мягкости в состав бумажной массы вводят белые
-                                        минеральные вещества: мел, тальк, каолин и др. Эта операция называется
-                                        наполнением.
+                                        минеральные вещества.
                                     </p>
                                     <p class="section__two-down-termin-down">
-                                        Отлив бумажного листа осуществляют на бумагоделательной машине, важнейшей частью
-                                        которой является непрерывно движущаяся (как транспортер) металлическая или
-                                        капроновая сетка.
+                                        Отлив бумажного листа осуществляют на бумагоделательной машине.
                                     </p>
                                 </div>
                             </div>
@@ -176,166 +137,101 @@
                     </section>
                 </div>
             </div>
+
             <div class="container">
                 <div class="main__three">
                     <section id="products" class="section__three">
                         <ul class="section__three-list">
                             <li class="section__three-list-item">
-                                <picture>
-                                    <source srcset="/images-320-res/package-photo.svg" media="(max-width: 575px)">
-                                    <source srcset="/images-576-res/package-photo.svg" media="(max-width: 767px)">
-                                    <source srcset="/images-768-res/package-photo.svg" media="(max-width: 1439px)">
-                                    <img src="/images/package-photo.svg" alt="Пример продукции - упаковка" class="section__three-item-img">
-                                </picture>
-                                <p class="section__three-list-item-head-text">
-                                    Упаковка
-                                </p>
-                                <p class="section__three-list-item-edition-grid">
-                                    Тираж: от 50 штук
-                                </p>
+                                <img src="/images/package-photo.svg" alt="Пример продукции - упаковка"
+                                    class="section__three-item-img" />
+                                <p class="section__three-list-item-head-text">Упаковка</p>
+                                <p class="section__three-list-item-edition-grid">Тираж: от 50 штук</p>
                                 <p class="section__three-list-item-edition-text">
-                                    Сделано из крафт-бумаги или плотного картона. Упаковки имеют различные формы
-                                    и расцветки, изготовим форму под заказ.
+                                    Сделано из крафт-бумаги или плотного картона.
                                 </p>
                                 <a href="#" class="section__three-list-item-edition-link">
-                                    <p class="section__three-link-text">
-                                        Подробнее →
-                                    </p>
+                                    <p class="section__three-link-text">Подробнее →</p>
                                 </a>
                             </li>
                             <li class="section__three-list-item">
-                                <picture>
-                                    <source srcset="/images-320-res/plastic-bag.svg" media="(max-width: 575px)">
-                                    <source srcset="/images-576-res/plastic-bag.svg" media="(max-width: 767px)">
-                                    <source srcset="/images-768-res/plastic-bag.svg" media="(max-width: 1439px)">
-                                    <img src="/images/plastic-bag.svg" alt="Пример продукции - пакеты" class="section__three-item-img">
-                                </picture>
-                                <p class="section__three-list-item-head-text">
-                                    Пакеты
-                                </p>
-                                <p class="section__three-list-item-edition-grid">
-                                    Тираж: от 200 штук
-                                </p>
+                                <img src="/images/plastic-bag.svg" alt="Пример продукции - пакеты"
+                                    class="section__three-item-img" />
+                                <p class="section__three-list-item-head-text">Пакеты</p>
+                                <p class="section__three-list-item-edition-grid">Тираж: от 200 штук</p>
                                 <p class="section__three-list-item-edition-text">
-                                    С прямоугольным дном. От 10 см до 60 см по высоте. Материалы: картон, крафт-бумага.
-                                    Различные расцветки и дизайн.
+                                    С прямоугольным дном. Материалы: картон, крафт-бумага.
                                 </p>
                                 <a href="#" class="section__three-list-item-edition-link">
-                                    <p class="section__three-link-text">
-                                        Подробнее →
-                                    </p>
+                                    <p class="section__three-link-text">Подробнее →</p>
                                 </a>
                             </li>
                             <li class="section__three-list-item">
-                                <picture>
-                                    <source srcset="/images-320-res/cases.svg" media="(max-width: 575px)">
-                                    <source srcset="/images-576-res/cases.svg" media="(max-width: 767px)">
-                                    <source srcset="/images-768-res/cases.svg" media="(max-width: 1439px)">
-                                    <img src="/images/cases.svg" alt="Пример продукции - кейсы" class="section__three-item-img">
-                                </picture>
-                                <p class="section__three-list-item-head-text">
-                                    Кейсы
-                                </p>
-                                <p class="section__three-list-item-edition-grid">
-                                    Тираж: от 30 штук
-                                </p>
+                                <img src="/images/cases.svg" alt="Пример продукции - кейсы"
+                                    class="section__three-item-img" />
+                                <p class="section__three-list-item-head-text">Кейсы</p>
+                                <p class="section__three-list-item-edition-grid">Тираж: от 30 штук</p>
                                 <p class="section__three-list-item-edition-text">
-                                    Подойдет для документов и других бумаг. Различные расцветки, размеры и плотность.
-                                    Материал: прессованная бумага.
+                                    Подойдет для документов и других бумаг.
                                 </p>
                                 <a href="#" class="section__three-list-item-edition-link">
-                                    <p class="section__three-link-text">
-                                        Подробнее →
-                                    </p>
+                                    <p class="section__three-link-text">Подробнее →</p>
                                 </a>
                             </li>
                             <li class="section__three-list-item">
-                                <picture>
-                                    <source srcset="/images-320-res/other-package.svg" media="(max-width: 575px)">
-                                    <source srcset="/images-576-res/other-package.svg" media="(max-width: 767px)">
-                                    <source srcset="/images-768-res/other-package.svg" media="(max-width: 1439px)">
-                                    <img src="/images/other-package.svg" alt="Пример продукции - прочее" class="section__three-item-img">
-                                </picture>
-                                <p class="section__three-list-item-head-text">
-                                    Другие изделия
-                                </p>
-                                <p class="section__three-list-item-edition-grid">
-                                    Тираж: от 100 штук
-                                </p>
+                                <img src="/images/other-package.svg" alt="Пример продукции - прочее"
+                                    class="section__three-item-img" />
+                                <p class="section__three-list-item-head-text">Другие изделия</p>
+                                <p class="section__three-list-item-edition-grid">Тираж: от 100 штук</p>
                                 <p class="section__three-list-item-edition-text">
-                                    Нестандартные упаковки, кейсы и другие изделия различных размеров и конфигураций.
-                                    Изготовим в кратчайшие сроки.
+                                    Нестандартные упаковки, кейсы и другие изделия.
                                 </p>
                                 <a href="#" class="section__three-list-item-edition-link">
-                                    <p class="section__three-link-text">
-                                        Подробнее →
-                                    </p>
+                                    <p class="section__three-link-text">Подробнее →</p>
                                 </a>
                             </li>
                         </ul>
                     </section>
                 </div>
             </div>
+
             <div class="container__grey">
                 <div class="main__four">
                     <ul class="section__four-list">
                         <li class="section__four-list-item">
-                            <picture>
-                                <source srcset="/images-320-res/hahnemuhle-logo.svg" media="(max-width: 575px)">
-                                <source srcset="/images-576-res/hahnemuhle-logo.svg" media="(max-width: 767px)">
-                                <source srcset="/images-768-res/hahnemuhle-logo.svg" media="(max-width: 1439px)">
-                                <img src="/images/hahnemuhle-logo.svg" alt="Логотип бренда Hahnemuhle" class="section__four-item-img">
-                            </picture>
+                            <img src="/images/hahnemuhle-logo.svg" alt="Логотип бренда Hahnemuhle"
+                                class="section__four-item-img" />
                         </li>
                         <li class="section__four-list-item">
-                            <picture>
-                                <source srcset="/images-320-res/canson-logo.svg" media="(max-width: 575px)">
-                                <source srcset="/images-576-res/canson-logo.svg" media="(max-width: 767px)">
-                                <source srcset="/images-768-res/canson-logo.svg" media="(max-width: 1439px)">
-                                <img src="/images/canson-logo.svg" alt="Логотип бренда Canson" class="section__four-item-img">
-                            </picture>
+                            <img src="/images/canson-logo.svg" alt="Логотип бренда Canson"
+                                class="section__four-item-img" />
                         </li>
                         <li class="section__four-list-item">
-                            <picture>
-                                <source srcset="/images-320-res/royal-talent-logo.svg" media="(max-width: 575px)">
-                                <source srcset="/images-576-res/royal-talent-logo.svg" media="(max-width: 767px)">
-                                <source srcset="/images-768-res/royal-talent-logo.svg" media="(max-width: 1439px)">
-                                <img src="/images/royal-talent-logo.svg" alt="Логотип бренда Royal Talens"
-                                    class="section__four-item-img">
-                            </picture>
+                            <img src="/images/royal-talent-logo.svg" alt="Логотип бренда Royal Talens"
+                                class="section__four-item-img" />
                         </li>
                         <li class="section__four-list-item">
-                            <picture>
-                                <source srcset="/images-320-res/fabriano-logo.svg" media="(max-width: 575px)">
-                                <source srcset="/images-576-res/fabriano-logo.svg" media="(max-width: 767px)">
-                                <source srcset="/images-768-res/fabriano-logo.svg" media="(max-width: 1439px)">
-                                <img src="/images/fabriano-logo.svg" alt="Логотип бренда Fabriano" class="section__four-item-img">
-                            </picture>
+                            <img src="/images/fabriano-logo.svg" alt="Логотип бренда Fabriano"
+                                class="section__four-item-img" />
                         </li>
                     </ul>
                     <div class="section__four-slider">
                         <div class="brands-slide">
-                            <img src="/images-320-res/hahnemuhle-logo.svg" alt="Логотип бренда Hahnemuhle">
-                            <img src="/images-320-res/canson-logo.svg" alt="Логотип бренда Canson">
-                            <img src="/images-320-res/royal-talent-logo.svg" alt="Логотип бренда Royal Talens">
-                            <img src="/images-320-res/fabriano-logo.svg" alt="Логотип бренда Fabriano">
-                            <img src="/images-320-res/hahnemuhle-logo.svg" alt="Логотип бренда Hahnemuhle">
-                            <img src="/images-320-res/canson-logo.svg" alt="Логотип бренда Canson">
-                            <img src="/images-320-res/royal-talent-logo.svg" alt="Логотип бренда Royal Talens">
-                            <img src="/images-320-res/fabriano-logo.svg" alt="Логотип бренда Fabriano">                           
+                            <img src="/images/hahnemuhle-logo.svg" alt="Логотип бренда Hahnemuhle" />
+                            <img src="/images/canson-logo.svg" alt="Логотип бренда Canson" />
+                            <img src="/images/royal-talent-logo.svg" alt="Логотип бренда Royal Talens" />
+                            <img src="/images/fabriano-logo.svg" alt="Логотип бренда Fabriano" />
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="container container-none-right">
                 <div class="main__five">
                     <section id="about" class="section__five">
-                        <h2 class="section__five-head-text">
-                            Simple скетчбук
-                        </h2>
+                        <h2 class="section__five-head-text">Simple скетчбук</h2>
                         <p class="section__five-head-termin">
-                            80 листов, твердая обложка, бумага Fabriano 200 г/м2. Подойдет и для графики и для
-                            акварели. Для самых смелых творческих замыслов!
+                            80 листов, твердая обложка, бумага Fabriano 200 г/м2.
                         </p>
                         <div class="buy__button">
                             <a href="#" class="buy__button-link">
@@ -344,41 +240,37 @@
                         </div>
                     </section>
                     <section class="section__five-photo">
-                        <picture>
-                            <source srcset="/images-320-res/book-photo.svg" media="(max-width: 575px)">
-                            <source srcset="/images-576-res/book-photo.svg" media="(max-width: 767px)">
-                            <source srcset="/images-768-res/book-photo.svg" media="(max-width: 1300px)">
-                            <img src="/images/book-photo.svg" alt="Book-photo" class="book__photo">
-                        </picture>                  
+                        <img src="/images/book-photo.svg" alt="Скетчбук" class="book__photo" />
                     </section>
                 </div>
-            </div>  
+            </div>
         </main>
+
         <footer class="footer">
             <div class="container__darkgrey">
                 <nav id="contact" class="footer__menu">
                     <div class="footer__menu-logo">
-                        <img src="/images/footer-logo.svg" alt="logo" class="footer__logo-img">
+                        <img src="/images/footer-logo.svg" alt="Логотип компании" class="footer__logo-img" />
                     </div>
                     <ul class="footer__menu-list">
                         <li class="footer__menu-link">
                             <a href="#" class="footer__link-item">
-                                <img src="/images/footer-facebook.svg" alt="link" class="footer__link-img">
+                                <img src="/images/footer-facebook.svg" alt="Ссылка Facebook" class="footer__link-img" />
                             </a>
                         </li>
                         <li class="footer__menu-link">
                             <a href="#" class="footer__link-item">
-                                <img src="/images/footer-X.svg" alt="link" class="footer__link-img">
+                                <img src="/images/footer-X.svg" alt="Ссылка X" class="footer__link-img" />
                             </a>
                         </li>
                         <li class="footer__menu-link">
                             <a href="#" class="footer__link-item">
-                                <img src="/images/footer-instagram.svg" alt="link" class="footer__link-img">
+                                <img src="/images/footer-instagram.svg" alt="Ссылка Instagram" class="footer__link-img" />
                             </a>
                         </li>
                         <li class="footer__menu-link">
                             <a href="#" class="footer__link-item">
-                                <img src="/images/footer-YT.svg" alt="link" class="footer__link-img">
+                                <img src="/images/footer-YT.svg" alt="Ссылка Youtube" class="footer__link-img" />
                             </a>
                         </li>
                     </ul>
